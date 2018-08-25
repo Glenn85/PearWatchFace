@@ -1,9 +1,32 @@
-*.iml
+#Android Studio
 .gradle
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
-.DS_Store
 /build
-/captures
-.externalNativeBuild
+*.iml
+build_file_checksums.ser
+
+#Optional for Android Studio
+out
+build
+
+#Generated files
+bin/
+gen/
+
+# Java class files
+*.class
+
+# files for the dex VM
+*.dex
+
+#built application files
+*.apk
+*.ap_
+
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
