@@ -17,9 +17,9 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault">
         <meta-data
-            tools:replace="android:value"
             android:name="android.support.VERSION"
-            android:value="26.1.0" />
+            android:value="26.1.0"
+            tools:replace="android:value" />
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
@@ -29,7 +29,7 @@
 
         <uses-library
             android:name="com.google.android.wearable"
-            android:required="false" />
+            android:required="true" />
 
         <service
             android:name=".modular.WatchFaceService"
@@ -298,12 +298,21 @@
             <intent-filter>
                 <action android:name="com.seapip.thomas.pear_watchface.sport_digital.CONFIG" />
 
-                <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION" />
+                <!-- <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION" /> -->
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".ColorActivity" />
         <activity android:name="android.support.wearable.complications.ComplicationHelperActivity" />
+        <activity
+            android:name=".settings.SettingsMenuActivity"
+            android:label="@string/name_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
